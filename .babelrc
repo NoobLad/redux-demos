@@ -6,6 +6,8 @@
       },
       "useBuiltIns": true
     }],
-    "stage-0"
-  ]
+    "stage-0",
+    "react"
+  ],
+  "plugins": ["transform-decorators-legacy"]
 }

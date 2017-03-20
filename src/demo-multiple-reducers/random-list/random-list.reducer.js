@@ -12,7 +12,6 @@ const initialState = {
 }
 
 export function randomList(state = initialState, {type, id}) {
-    console.log(state, type, id)
     switch (type) {
         case randomListTypes.add:
             return {

@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const relativeTo = (...args) => join(__dirname, ...args)
 
-const jsFilesTest = /\.js$/
+const jsFilesTest = /\.jsx?$/
 const cssFilesTest = /\.css$/
 const htmlFilesTest = /\.html$/
 
@@ -78,7 +78,12 @@ function generateHtmlPages(directories) {
           template: join(path, 'index.html'),
           chunks: [name],
       })
-    )
+    ).concat(new HtmlWebpackPlugin({
+        title: "Home",
+        filename: "index.html",
+        template: relativeTo("./src/index.html"),
+        chunks: []
+    }))
 }
 
 function listDirectories(srcPath) {
