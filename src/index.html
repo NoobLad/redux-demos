@@ -3,14 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
+    <link rel="stylesheet" href="${require('!!url-loader!./home.css')}">
 </head>
 <body>
-<h1>Demos :</h1>
+<h1><img
+        style="width: 100%; max-width: 200px"
+        src="https://camo.githubusercontent.com/f28b5bc7822f1b7bb28a96d8d09e7d79169248fc/687474703a2f2f692e696d6775722e636f6d2f4a65567164514d2e706e67"
+        alt="Logo Redux"></h1>
+<h2>Démos : </h2>
 <ul>
-    <li><a href="./demo-simple">Simple</a></li>
-    <li><a href="./demo-multiple-reducers">Multiple Reducers</a></li>
-    <li><a href="./demo-react">With React</a></li>
-    <li><a href="./demo-react-middleware">With middleware</a></li>
+    <li><a href="./demo-simple">Simple Counter</a></li>
+    <li><a href="./demo-multiple-reducers">Multiple Reducers : counter and random strings</a></li>
+    <li><a href="./demo-react">With React : I only know how to count</a></li>
+    <li><a href="./demo-react-middleware">With middleware : What if i tell you how i count ?</a></li>
 </ul>
 </body>
 </html>

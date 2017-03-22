@@ -1,9 +1,9 @@
-import {store} from "./store";
+import {store} from "./store"
 
 export function onClickDispatch(element, actionBuilder) {
     onClick(
-      element,
-      () => store.dispatch(actionBuilder())
+        element,
+        () => store.dispatch(actionBuilder()),
     )
 }
 

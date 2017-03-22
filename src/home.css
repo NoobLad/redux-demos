@@ -1,0 +1,30 @@
+html {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+li {
+    transition: all 0.2s ease-in-out;
+    padding: 5px;
+}
+li a {
+    display: block;
+    border: 1px darkblue solid;
+    padding: 5px;
+    box-shadow: 3px 3px grey;
+    text-align: center;
+    background-color: cornflowerblue;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: bolder;
+}
+li:hover a {
+    background-color: cadetblue;
+    box-shadow: 6px 6px grey;
+}
+li:hover {
+    padding-top: 2px;
+}

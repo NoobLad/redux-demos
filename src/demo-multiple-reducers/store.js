@@ -1,10 +1,12 @@
-import {createStore, combineReducers} from "redux"
+import {combineReducers, createStore} from "redux"
 import {counter} from "./counter/counter.reducer.js"
 import {randomList} from "./random-list/random-list.reducer.js"
 
 const rootReducer = combineReducers({
     counter,
-    randomList
+    randomList,
 })
 
-export const store = createStore(rootReducer)
+const devTools = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+
+export const store = createStore(rootReducer, devTools)

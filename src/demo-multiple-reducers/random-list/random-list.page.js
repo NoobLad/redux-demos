@@ -1,12 +1,13 @@
 import {store} from "../store"
-import {onClickDispatch, onClick} from "../helpers"
+import {onClick, onClickDispatch} from "../helpers"
 import {add, remove} from "./random-list.reducer.js"
+import './random.css'
 
 const randomListAdd = document.querySelector('.random-list-add')
 const randomListContainer = document.querySelector('.random-list')
 
 store.subscribe(() => {
-    const list = store.getState().randomList.list;
+    const list = store.getState().randomList.list
     randomListContainer.innerHTML = list.map(template).join('')
 })
 

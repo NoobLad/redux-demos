@@ -1,4 +1,5 @@
-import {createStore} from "redux";
+import {createStore} from "redux"
+import "./simple.css"
 
 const counterElement = document.querySelector('.counter')
 
@@ -14,17 +15,17 @@ function counter(state = 0, action) {
 }
 
 const store = createStore(
-  counter,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+    counter,
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
 )
 
-store.subscribe(() => counterElement.innerHTML = store.getState())
+store.subscribe(() => counterElement.dataset.value = store.getState())
 
-document.querySelector('.increment').addEventListener('click', () => {
+document.querySelector('.counter-inc').addEventListener('click', () => {
     store.dispatch({type: 'INCREMENT'})
 })
 
-document.querySelector('.decrement').addEventListener('click', () => {
+document.querySelector('.counter-dec').addEventListener('click', () => {
     store.dispatch({type: 'DECREMENT'})
 })
 

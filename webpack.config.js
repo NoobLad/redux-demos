@@ -38,7 +38,7 @@ module.exports = function (env) {
                       },
                       {
                           test: htmlFilesTest,
-                          use: 'html-loader',
+                          use: 'html-loader?interpolate',
                       },
                       {
                           exclude: [jsFilesTest, cssFilesTest, htmlFilesTest],

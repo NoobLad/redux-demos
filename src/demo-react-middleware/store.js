@@ -1,9 +1,9 @@
-import {createStore, applyMiddleware} from "redux";
-import createLogger from 'redux-logger';
+import {applyMiddleware, compose, createStore} from "redux"
+import createLogger from "redux-logger"
 
 export const counterTypes = {
     increment: 'INCREMENT',
-    decrement: 'DECREMENT'
+    decrement: 'DECREMENT',
 }
 
 export const increment = () => ({type: counterTypes.increment})
@@ -22,7 +22,10 @@ function counter(state = 0, action) {
 
 const logger = createLogger()
 
+const devTools = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 export const store = createStore(
-  counter,
-  applyMiddleware(logger)
+    counter,
+    devTools(
+        applyMiddleware(logger),
+    ),
 )

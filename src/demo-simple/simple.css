@@ -1,0 +1,41 @@
+p {
+    font-family: "Comic Sans MS", serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 3vw;
+    line-height: 5vw;
+}
+.counter:before {
+    font-size: 5vw;
+    vertical-align: text-bottom;
+    transition: all 0.1s ease-in-out;
+    content: attr(data-value);
+}
+.counter[data-value$="2"]:before, .counter[data-value$="4"]:before, .counter[data-value$="6"]:before, .counter[data-value$="8"]:before, .counter[data-value$="0"]:before {
+    font-size: 4vw;
+}
+.buttons {
+    display: flex;
+    justify-content: space-around;
+}
+button {
+    flex-grow: 1;
+    height: 5vw;
+    margin: 5px;
+    min-height: 20px;
+    font-size: 2vw;
+    border-radius: 5px;
+    border: 2px solid;
+    color: ghostwhite;
+}
+button:hover {
+    border-width: 5px;
+}
+.counter-inc {
+    background-color: forestgreen;
+    border-color: darkgreen;
+}
+.counter-dec {
+    background-color: red;
+    border-color: darkred;
+}
